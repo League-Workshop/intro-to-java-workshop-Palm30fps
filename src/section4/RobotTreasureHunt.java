@@ -16,28 +16,29 @@ import org.jointheleague.graphical.robot.Robot;
 public class RobotTreasureHunt implements KeyEventDispatcher{
 
 	// 1. Create a new mini robot (type "mini" inside the parentheses)
-	
+	Robot zayt = new Robot("mini");
 	private void goUp() throws InterruptedException {
 		// 2. Make the robot move up the screen (use setAngle(angle) and microMove(distance))
-		
+		zayt.setAngle(0); zayt.microMove(11);
 	}
 
 	private void goDown() throws InterruptedException{
 		// 3. make the robot move down the screen (use setAngle(angle) and microMove(distance))
-		
+		zayt.setAngle(180);zayt.microMove(15);
 	}
 
 	private void turnLeft() throws InterruptedException{
 		// 4. Make the robot turn to the left (use setAngle(angle) and microMove(distance))
-
-	}
+zayt.setAngle(270);zayt.microMove(10);
+ 
+}
 
 	private void turnRight() throws InterruptedException{
 		// 5. make the robot turn to the right (use setAngle(angle) and microMove(distance))
-		
+		zayt.setAngle(90);zayt.microMove(13);
 	}
 
-	private void spaceBarWasPressed() {
+	private void spaceBarWasPressed() { 
 
 		// 5. Change ROBOTNAME below to match the name of the robot you created in step 1.  THEN, remove the slashes at the beginning of the next two lines
 		//int robotXLocation = ROBOTNAME.getX();
@@ -58,7 +59,7 @@ public class RobotTreasureHunt implements KeyEventDispatcher{
 
 	private void go() {
 		KeyboardFocusManager.getCurrentKeyboardFocusManager().addKeyEventDispatcher(this);
-		Robot.setWindowImage("section4/treasure_hunt.jpg");
+		zayt.setWindowImage("section4/treasure_hunt.jpg");
 	
 		JOptionPane.showMessageDialog(null, "Ask the girl for help with your quest. Press the space bar to ask.");
 
